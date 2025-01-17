@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Expense Tracker</h1>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+  </header>
+  <main>
+    <!-- Add Expense Form -->
+    <section id="add-expense">
+      <h2>Add Expense</h2>
+      <form id="expense-form">
+        <div class="form-group">
+          <input type="text" id="description" placeholder="Description" required>
+          <input type="number" id="amount" placeholder="Amount (₹)" required>
+          <select id="category">
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Other">Other</option>
+          </select>
+          <input type="date" id="date" required>
+        </div>
+        <button type="submit">Add Expense</button>
+      </form>
+      <p id="feedback" class="hidden"></p>
+    </section>
+
+    <!-- Expense List -->
+    <section id="expense-list">
+      <h2>Expenses</h2>
+      <table>
+        <thead>
+          <tr>
+            <th onclick="sortExpenses('description')">Description ⬍</th>
+            <th onclick="sortExpenses('amount')">Amount (₹) ⬍</th>
+            <th onclick="sortExpenses('category')">Category ⬍</th>
+            <th onclick="sortExpenses('date')">Date ⬍</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="expenses">
+          <!-- Dynamic rows -->
+        </tbody>
+      </table>
+      <button id="clear-expenses">Clear All Expenses</button>
+    </section>
+
+    <!-- Charts -->
+    <section id="charts">
+      <h2>Spending Overview</h2>
+      <div class="chart-container">
+        <canvas id="expense-chart"></canvas>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

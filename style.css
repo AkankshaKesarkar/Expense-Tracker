@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  :root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --header-bg: #4caf50;
+    --header-text: white;
+    --button-bg: #4caf50;
+    --button-hover-bg: #45a049;
+    --table-bg: white;
+    --table-header-bg: #f4f4f4;
+    --table-border: #ddd;
+  }
+  
+  body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --header-bg: #1f1f1f;
+    --header-text: white;
+    --button-bg: #333;
+    --button-hover-bg: #444;
+    --table-bg: #222;
+    --table-header-bg: #333;
+    --table-border: #444;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 1rem;
+  }
+  
+  main {
+    margin: 2rem;
+  }
+  
+  h1, h2 {
+    margin: 0;
+  }
+  
+  #add-expense, #expense-list, #charts {
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  form input, form select, form button {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid var(--table-border);
+    border-radius: 5px;
+    background-color: var(--table-bg);
+    color: var(--text-color);
+  }
+  
+  form button {
+    background-color: var(--button-bg);
+    color: var(--header-text);
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: var(--button-hover-bg);
+  }
+  
+  #feedback {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  #feedback.success {
+    color: #4caf50;
+  }
+  
+  #feedback.error {
+    color: #f44336;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: var(--table-bg);
+  }
+  
+  th, td {
+    border: 1px solid var(--table-border);
+    padding: 1rem;
+    text-align: center;
+    color: var(--text-color);
+  }
+  
+  th {
+    cursor: pointer;
+    background-color: var(--table-header-bg);
+  }
+  
+  #clear-expenses {
+    margin-top: 1rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #clear-expenses:hover {
+    background-color: #d32f2f;
+  }
+  
+  .chart-container {
+    max-width: 400px;
+    margin: 1rem auto;
+    position: relative;
+  }
+  
+  #theme-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--header-text);
+  }
+  
